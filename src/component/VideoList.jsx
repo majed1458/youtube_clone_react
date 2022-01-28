@@ -1,7 +1,14 @@
 import React from 'react';
+import { Grid } from '@material-ui/core';
+import VideoItem from './VideoItem';
 
-const VideoList = () => {
-  return <h2>this is the video player component</h2>;
-};
-
+const VideoList = ({ videos }) => {
+  // const videosItems = () => { ) }
+  return (
+    <Grid container spacing={10}>
+     { videos.map((video, id) =>( <VideoItem key={id} video={video} />))
+     }
+    </Grid>
+  );
+}
 export default VideoList;

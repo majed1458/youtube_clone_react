@@ -9,6 +9,10 @@ export default class app extends Component {
         videos:[],
         searched:null
     }
+
+     onVideoSelect=(video)=>{
+        this.setState({searched:video})
+    }
     
     handelSubmit=async(searchTerm)=>{
         const result= await youtube.get('search',{params:{q:searchTerm}})
@@ -32,7 +36,7 @@ export default class app extends Component {
                         </Grid>
                         <Grid item xs={4}>
                             {/* video lis */}
-                            <VideoList/>
+                            <VideoList videos={this.state.videos}/>
                         </Grid>
                     </Grid>
                 </Grid>
