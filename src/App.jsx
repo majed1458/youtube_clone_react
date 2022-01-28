@@ -10,6 +10,10 @@ export default class app extends Component {
         searched:null
     }
 
+    componentDidMount(){
+        this.handelSubmit('coala')
+    }
+
      onVideoSelect=(video)=>{
         this.setState({searched:video})
     }
@@ -36,7 +40,7 @@ export default class app extends Component {
                         </Grid>
                         <Grid item xs={4}>
                             {/* video lis */}
-                            <VideoList videos={this.state.videos}/>
+                            <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect}/>
                         </Grid>
                     </Grid>
                 </Grid>

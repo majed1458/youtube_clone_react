@@ -9,13 +9,13 @@ const VideoPlay = ({ video }) => {
 
     return (
         <React.Fragment>
-            <Paper elevation={3} style={{ height: '20%' }}>
+            <Paper elevation={3} style={{ height: '25%' }}>
                 <iframe frameBorder={0} width='100%' height='100%' title='video player' src={url} />
             </Paper>
-            <Paper elevation={3}>
-            <Typography variant='h3'>{video.snippet.title}</Typography>
+            <Paper elevation={3} style={{padding:"1rem 2rem"}}>
+            <Typography variant='h5'><b>{video.snippet.title}</b></Typography>
 
-            <Typography variant='subtitle1'>{video.snippet.description}</Typography>
+            <Typography variant='subtitle1' style={{width:"80%"}}>{video.snippet.description}</Typography>
             </Paper>
         </React.Fragment>
     )
