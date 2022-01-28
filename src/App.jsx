@@ -11,7 +11,7 @@ export default class app extends Component {
     }
 
     componentDidMount(){
-        this.handelSubmit('coala')
+        this.handelSubmit('react js')
     }
 
      onVideoSelect=(video)=>{
